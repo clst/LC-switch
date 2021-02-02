@@ -256,7 +256,7 @@
             // trigger events
             if(!forced_action) {
                 const lcsOnEvent = new Event("lcs-off"),
-                      lcsStatusChangeEvent = new Event('lcs-statuschange');
+                      lcsStatusChangeEvent = new Event('lcs-statuschange', {bubbles: true});
 
                 el.dispatchEvent(lcsOnEvent);
                 el.dispatchEvent(lcsStatusChangeEvent);
@@ -292,7 +292,7 @@
             // trigger events
             if(!forced_action) {
                 const lcsOffEvent = new Event("lcs-off"),
-                      lcsStatusChangeEvent = new Event('lcs-statuschange');
+                      lcsStatusChangeEvent = new Event('lcs-statuschange', {bubbles: true});
 
                 el.dispatchEvent(lcsOffEvent);
                 el.dispatchEvent(lcsStatusChangeEvent);
@@ -333,7 +333,7 @@
 
             // trigger events
             const lcsDisabledEvent = new Event("lcs-disabled"),
-                  lcsStatusChangeEvent = new Event('lcs-statuschange');
+                  lcsStatusChangeEvent = new Event('lcs-statuschange', {bubbles: true});
             
             el.dispatchEvent(lcsDisabledEvent);
             el.dispatchEvent(lcsStatusChangeEvent);
@@ -355,7 +355,7 @@
 
             // trigger events
             const lcsEnabledEvent = new Event("lcs-enabled"),
-                  lcsStatusChangeEvent = new Event('lcs-statuschange');
+                  lcsStatusChangeEvent = new Event('lcs-statuschange', {bubbles: true});
             
             el.dispatchEvent(lcsEnabledEvent);
             el.dispatchEvent(lcsStatusChangeEvent);
